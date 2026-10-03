@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OmniFlow AI | Portafolio de Sistemas Automatizados de Atención al Cliente</title>
+  <meta name="description" content="Portafolio interactivo de agentes inteligentes de IA y automatizaciones de atención al cliente para e-commerce. Reduce costos un 70% y atiende 24/7 en WhatsApp.">
+  <meta name="keywords" content="atención al cliente automatizada, chatbot whatsapp e-commerce, agentes de ia, n8n, soporte automatizado, tracking de pedidos">
+  <meta name="author" content="OmniFlow AI Studio">
+  
+  <!-- Open Graph / Redes Sociales -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="OmniFlow AI - Automatizaciones de Atención al Cliente para E-commerce">
+  <meta property="og:description" content="Demostración interactiva en vivo: simulador de WhatsApp Business + panel de operaciones CRM en tiempo real.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1200&auto=format&fit=crop&q=80">
+
+  <!-- Favicon y PWA -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#25d366">
+
+  <!-- Datos Estructurados JSON-LD (SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "OmniFlow AI",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "description": "Portafolio interactivo de agentes de inteligencia artificial y automatizaciones de atención al cliente para e-commerce."
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Hojas de Estilos CSS Modulares -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+  <!-- Luces Ambientales de Fondo (Neon Glow Orbs) -->
+  <div class="ambient-glow-1"></div>
+  <div class="ambient-glow-2"></div>
+  <div class="ambient-glow-3"></div>
+
+  <!-- Header & Navegación -->
+  <header class="site-header" id="header">
+    <div class="container nav-wrapper">
+      <a href="#hero" class="brand-logo" id="logo-link">
+        <div class="brand-logo-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V15H13V17ZM13 13H11V7H13V13Z"/>
+          </svg>
+        </div>
+        <span>OmniFlow<span style="color: var(--brand-wa);">.ai</span></span>
+        <span class="brand-badge" id="live-ai-badge">SISTEMA ACTIVO</span>
+      </a>
+
+      <nav class="site-nav" id="main-nav">
+        <a href="#demo" class="nav-link"><span>📱</span> Demo Dual</a>
+        <a href="#calculadora" class="nav-link"><span>📊</span> Calculadora ROI</a>
+        <a href="#arquitectura" class="nav-link"><span>⚙️</span> Arquitectura</a>
+        <a href="#casos" class="nav-link"><span>🏆</span> Casos de Éxito</a>
+        <a href="#contacto" class="nav-link"><span>✉️</span> Contacto</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn btn-outline btn-sm" id="btn-open-api-modal" title="Conectar API Key opcional de Gemini o OpenAI">
+          <span>⚙️</span> Modo IA
+        </button>
+        <button class="btn btn-cyan btn-sm btn-pill" data-open-booking id="nav-cta-booking">
+          <span>📅</span> Agendar Demo
+        </button>
+        <a href="#demo" class="btn btn-primary btn-sm btn-pill" id="nav-cta-demo">
+          Probar Demo en Vivo
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="section section-hero" id="hero">
+    <div class="container">
+      <div class="section-badge section-badge-wa">
+        <span style="font-size: 1rem;">⚡</span> Sistemas Automatizados de Atención al Cliente
+      </div>
+      
+      <h1 class="hero-main-title">
+        Automatiza la Atención de tu E-commerce con <br>
+        <span class="gradient-text-wa">Agentes Inteligentes</span> que <span class="gradient-text-cyan">Resuelven en Segundos</span>
+      </h1>
+
+      <p class="hero-description">
+        Reduce hasta un <b>75% los costos operativos</b> de soporte y brinda respuestas inmediatas 24/7 en WhatsApp. 
+        Rastreo de envíos en tiempo real, gestión automática de cambios y sincronización total con tu tienda virtual y CRM.
+      </p>
+
+      <div class="hero-ctas">
+        <a href="#demo" class="btn btn-primary" id="hero-btn-demo">
+          <span>🚀</span> Probar Demostración Dual
+        </a>
+        <button class="btn btn-cyan" data-open-booking id="hero-btn-booking">
+          <span>📅</span> Agendar Llamada Estratégica (20 Min)
+        </button>
+        <a href="#calculadora" class="btn btn-outline" id="hero-btn-calc">
+          <span>📈</span> Calcular Ahorro & ROI
+        </a>
+      </div>
+
+      <!-- Banner de Métricas Rápidas -->
+      <div class="hero-stats-banner">
+        <div class="stat-item">
+          <div class="stat-number" style="color: var(--brand-wa);">82%</div>
+          <div class="stat-label">Consultas N1 Auto-Resueltas</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" style="color: var(--brand-cyan);">&lt; 4s</div>
+          <div class="stat-label">Tiempo Medio de Respuesta</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" style="color: #a855f7;">96%</div>
+          <div class="stat-label">Satisfacción de Clientes (CSAT)</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" style="color: #f59e0b;">24/7</div>
+          <div class="stat-label">Disponibilidad en WhatsApp</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN DEMO DUAL EN VIVO (LA JOYA DEL PORTAFOLIO) -->
+  <section class="section" id="demo">
+    <div class="container-wide">
+      <div class="section-header">
+        <div class="section-badge">
+          <span>👁️</span> Demostración Interactiva en Vivo
+        </div>
+        <h2 class="section-title">Experiencia Dual Sincronizada</h2>
+        <p class="section-subtitle">
+          Prueba el asistente como cliente desde el simulador de WhatsApp a la izquierda, y observa en tiempo real a la derecha cómo el panel de operaciones y CRM procesa los datos, ejecuta herramientas y actualiza el estado de las órdenes.
+        </p>
+      </div>
+
+      <!-- Barra de Escenarios Predefinidos (1-Click Presets) -->
+      <div class="scenario-selector-bar">
+        <div class="scenario-header-row">
+          <div class="scenario-title-area">
+            <span class="icon">⚡</span>
+            <span>Escenarios de Prueba Inmediata (1-Clic):</span>
+          </div>
+          <button class="btn btn-outline btn-sm" id="btn-reset-demo" style="font-size: 0.8rem; padding: 4px 12px;">
+            <span>🔄</span> Reiniciar Demostración
+          </button>
+        </div>
+        <div class="scenario-pills-row" id="scenario-pills-row">
+          <!-- Generado dinámicamente por main.js -->
+        </div>
+      </div>
+
+      <!-- Contenedor Dual: Smartphone WhatsApp + Backoffice CRM -->
+      <div class="dual-demo-container">
+
+        <!-- LADO A: Simulador de Smartphone / WhatsApp Business -->
+        <div class="phone-mockup-wrapper">
+          <!-- Barra superior del teléfono con Dynamic Island -->
+          <div class="phone-island-bar">
+            <span>11:21</span>
+            <div class="dynamic-island"></div>
+            <span>5G 🔋 98%</span>
+          </div>
+
+          <!-- Header de WhatsApp -->
+          <div class="wa-header">
+            <div class="wa-header-left">
+              <div class="wa-avatar-box">
+                <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100&auto=format&fit=crop&q=80" alt="Avatar Bot" class="wa-avatar-img">
+                <div class="wa-online-dot"></div>
+              </div>
+              <div class="wa-header-info">
+                <div class="wa-header-name">
+                  OmniFlow Store
+                  <span class="wa-verified-badge" title="Canal Verificado de WhatsApp Business">✓</span>
+                </div>
+                <div class="wa-header-status">
+                  <span style="color: var(--brand-wa);">●</span> En línea • Asistente IA
+                </div>
+              </div>
+            </div>
+            <div class="wa-header-actions">
+              <button class="wa-icon-btn" title="Llamada">📞</button>
+              <button class="wa-icon-btn" title="Videollamada">📹</button>
+              <button class="wa-icon-btn" title="Opciones">⋮</button>
+            </div>
+          </div>
+
+          <!-- Cuerpo del Chat de WhatsApp -->
+          <div class="wa-chat-body" id="wa-chat-body">
+            <!-- Mensajes y tarjetas inyectadas dinámicamente -->
+          </div>
+
+          <!-- Indicador de "Escribiendo..." -->
+          <div class="typing-indicator-box" id="wa-typing-indicator">
+            <span style="font-size: 0.75rem; color: #8696a0; margin-right: 4px;">OmniFlow está escribiendo</span>
+            <span class="typing-dot"></span>
+            <span class="typing-dot"></span>
+            <span class="typing-dot"></span>
+          </div>
+
+          <!-- Carrusel de Respuestas Rápidas (Chips) -->
+          <div class="wa-quick-replies-tray" id="wa-quick-replies">
+            <!-- Inyectado dinámicamente -->
+          </div>
+
+          <!-- Barra de Entrada de WhatsApp -->
+          <div class="wa-input-footer">
+            <button class="wa-icon-btn" style="font-size: 1.2rem;">😊</button>
+            <input type="text" class="wa-input-box" id="wa-input-box" placeholder="Escribe un mensaje o pregunta..." autocomplete="off">
+            <button class="wa-send-btn" id="wa-send-btn" title="Enviar Mensaje">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- LADO B: Panel CRM y Centro de Operaciones en Vivo -->
+        <div class="crm-panel-wrapper">
+          <!-- Header del CRM -->
+          <div class="crm-header">
+            <div class="crm-header-title">
+              <div class="crm-icon-glow">⚡</div>
+              <div>
+                <div class="crm-title-text">Centro de Control de Operaciones & CRM</div>
+                <div style="font-size: 0.75rem; color: var(--text-muted);">Sincronización bidireccional en tiempo real</div>
+              </div>
+            </div>
+            <div class="crm-header-badges">
+              <span class="status-tag tag-success">● API ONLINE (99.99%)</span>
+              <span class="status-tag tag-info">CANAL: WHATSAPP CLOUD API</span>
+            </div>
+          </div>
+
+          <!-- Cuerpo con widgets interactivos -->
+          <div class="crm-body">
+
+            <!-- Fila Superior: Perfil del Cliente + Medidor de Sentimiento -->
+            <div class="crm-row-top">
+              <!-- Widget Perfil de Cliente -->
+              <div class="crm-widget-card">
+                <div class="crm-widget-label">
+                  <span>👤 Perfil del Cliente</span>
+                  <span class="status-tag tag-neutral" id="crm-customer-segment">Cliente Frecuente</span>
+                </div>
+                <div class="customer-profile-box">
+                  <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80" alt="Avatar Cliente" class="customer-avatar" id="crm-customer-avatar">
+                  <div class="customer-info-details">
+                    <div class="customer-name" id="crm-customer-name">Carlos Mendoza</div>
+                    <div class="customer-email" id="crm-customer-email">carlos.mendoza@email.com</div>
+                    <div class="customer-stats-pills">
+                      <span class="pill-sm" id="crm-customer-orders-count">4 pedidos</span>
+                      <span class="pill-sm">LTV: <b id="crm-customer-ltv">$482.00 USD</b></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Widget Sentimiento y SLA -->
+              <div class="crm-widget-card">
+                <div class="crm-widget-label">
+                  <span>🧠 Análisis de Sentimiento en Vivo</span>
+                  <span id="crm-sentiment-score" style="color: var(--brand-cyan); font-weight: 800;">75%</span>
+                </div>
+                <div class="sentiment-meter-wrapper">
+                  <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span id="crm-sentiment-badge" class="status-tag tag-success">🟢 Cliente Satisfecho</span>
+                    <span style="font-size: 0.72rem; color: var(--text-muted);">Inferencia NLP en 12ms</span>
+                  </div>
+                  <div class="sentiment-bar-bg">
+                    <div class="sentiment-bar-fill" id="crm-sentiment-bar"></div>
+                  </div>
+                  <div class="sentiment-labels-row">
+                    <span>Frustrado (0%)</span>
+                    <span>Neutro (50%)</span>
+                    <span>Satisfecho (100%)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Fila de Métricas del Ticket Actual -->
+            <div class="ticket-stats-grid">
+              <div class="ticket-stat-box">
+                <div class="ticket-stat-title">Ticket ID</div>
+                <div class="ticket-stat-val" id="crm-ticket-id">#TK-2026-4822</div>
+              </div>
+              <div class="ticket-stat-box">
+                <div class="ticket-stat-title">Prioridad</div>
+                <div class="ticket-stat-val"><span class="status-tag tag-info" id="crm-ticket-priority">NORMAL (P3)</span></div>
+              </div>
+              <div class="ticket-stat-box">
+                <div class="ticket-stat-title">Estado de Resolución</div>
+                <div class="ticket-stat-val"><span class="status-tag tag-success" id="crm-ticket-status">Resuelto Autónomamente</span></div>
+              </div>
+              <div class="ticket-stat-box">
+                <div class="ticket-stat-title">Latencia SLA</div>
+                <div class="ticket-stat-val" id="crm-response-time" style="color: var(--brand-wa);">0.82s (Auto)</div>
+              </div>
+            </div>
+
+            <!-- Traza de Razonamiento del Agente (Pipeline) -->
+            <div class="crm-widget-card">
+              <div class="crm-widget-label">
+                <span>🤖 Traza de Razonamiento & Pipeline del Agente</span>
+                <span class="status-tag tag-info">Paso a Paso</span>
+              </div>
+              <div class="reasoning-trace-container" id="crm-reasoning-trace">
+                <!-- Se llena dinámicamente con los pasos de IA -->
+                <div class="trace-step done">
+                  <div class="trace-number">1</div>
+                  <div class="trace-info">
+                    <div class="trace-title">Mensaje Recibido</div>
+                    <div class="trace-detail">Webhook WhatsApp Cloud API verificado (HMAC SHA256)</div>
+                  </div>
+                </div>
+                <div class="trace-step done">
+                  <div class="trace-number">2</div>
+                  <div class="trace-info">
+                    <div class="trace-title">Clasificación de Intención</div>
+                    <div class="trace-detail">Intención: ORDER_TRACKING (Confianza: 98.4%)</div>
+                  </div>
+                </div>
+                <div class="trace-step done">
+                  <div class="trace-number">3</div>
+                  <div class="trace-info">
+                    <div class="trace-title">Ejecución de Herramienta</div>
+                    <div class="trace-detail">Tool: dhl_courier_tracking_api(orderId: "AR-8492")</div>
+                  </div>
+                </div>
+                <div class="trace-step done active">
+                  <div class="trace-number">4</div>
+                  <div class="trace-info">
+                    <div class="trace-title">Actualización en CRM</div>
+                    <div class="trace-detail">Ticket sincronizado y respuesta renderizada en chat</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Visor de Base de Datos (JSON Inspector) -->
+            <div class="crm-widget-card">
+              <div class="crm-widget-label">
+                <span>📦 Consulta a Base de Datos (Shopify / ERP Record)</span>
+                <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--brand-cyan);">orders_db.find()</span>
+              </div>
+              <pre class="json-view-box" id="crm-order-json">Cargando datos de orden...</pre>
+            </div>
+
+            <!-- Feed de Disparadores y Webhooks en Vivo -->
+            <div class="crm-widget-card">
+              <div class="crm-widget-label">
+                <span>⚡ Feed de Disparadores y Webhooks en Tiempo Real</span>
+                <span style="color: var(--brand-wa); font-size: 0.75rem;">LIVE LOGS</span>
+              </div>
+              <ul class="triggers-list-box" id="crm-triggers-list">
+                <!-- Inyectado dinámicamente -->
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CALCULADORA INTERACTIVA DE ROI Y AHORRO OPERATIVO -->
+  <section class="section" id="calculadora">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">
+          <span>📈</span> Retorno de Inversión (ROI)
+        </div>
+        <h2 class="section-title">Calculadora de Ahorro y Eficiencia</h2>
+        <p class="section-subtitle">
+          Descubre el impacto financiero directo que tiene automatizar el 80% de tus consultas de soporte de primer contacto. Ajusta los parámetros de tu negocio a continuación.
+        </p>
+      </div>
+
+      <div class="calc-card-container">
+        <!-- Columna de Controles Deslizadores -->
+        <div class="calc-controls-col">
+          
+          <div class="calc-slider-group">
+            <div class="calc-slider-header">
+              <span class="calc-slider-label">1. Volumen mensual de pedidos:</span>
+              <span class="calc-slider-val" id="calc-orders-val">4.500 pedidos/mes</span>
+            </div>
+            <input type="range" class="range-slider" id="calc-orders-input" min="500" max="25000" step="250" value="4500">
+            <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--text-muted);">
+              <span>500</span>
+              <span>12.500</span>
+              <span>25.000+</span>
+            </div>
+          </div>
+
+          <div class="calc-slider-group">
+            <div class="calc-slider-header">
+              <span class="calc-slider-label">2. Tasa de consultas de clientes (% pedidos):</span>
+              <span class="calc-slider-val" id="calc-rate-val">25%</span>
+            </div>
+            <input type="range" class="range-slider" id="calc-rate-input" min="10" max="50" step="5" value="25">
+            <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--text-muted);">
+              <span>10% (Baja)</span>
+              <span>25% (Estándar e-commerce)</span>
+              <span>50% (Alta complejidad)</span>
+            </div>
+          </div>
+
+          <div class="calc-slider-group">
+            <div class="calc-slider-header">
+              <span class="calc-slider-label">3. Costo mensual promedio por agente de soporte:</span>
+              <span class="calc-slider-val" id="calc-cost-val">$1.200 USD/mes</span>
+            </div>
+            <input type="range" class="range-slider" id="calc-cost-input" min="600" max="3000" step="100" value="1200">
+            <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--text-muted);">
+              <span>$600 USD</span>
+              <span>$1.500 USD</span>
+              <span>$3.000 USD</span>
+            </div>
+          </div>
+
+          <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--border-glass); border-radius: var(--radius-sm); padding: 14px; font-size: 0.85rem; color: var(--text-secondary);">
+            💡 <b>Premisa de cálculo validada:</b> OmniFlow AI automatiza el 82% de las dudas recurrentes (dónde está mi paquete, cómo devuelvo, tallas y stock) en menos de 4 segundos sin intervención humana.
+          </div>
+
+        </div>
+
+        <!-- Columna de Resultados de Ahorro -->
+        <div class="calc-results-col">
+          <div class="annual-savings-card">
+            <div class="annual-savings-label">Ahorro Anual Estimado</div>
+            <div class="annual-savings-value" id="calc-annual-savings">$18.420 USD</div>
+            <div style="font-size: 0.95rem; color: var(--text-secondary);">
+              Ahorro neto mensual de <b style="color: var(--brand-wa);" id="calc-monthly-savings">$1.535 USD</b>
+            </div>
+          </div>
+
+          <div class="calc-submetrics-grid">
+            <div class="submetric-item">
+              <div class="submetric-title">Tickets Auto-Resueltos</div>
+              <div class="submetric-val" id="calc-tickets-automated" style="color: var(--brand-cyan);">923 tickets</div>
+            </div>
+            <div class="submetric-item">
+              <div class="submetric-title">Horas Ahorradas / Mes</div>
+              <div class="submetric-val" id="calc-hours-saved" style="color: #a855f7;">138 hrs</div>
+            </div>
+            <div class="submetric-item">
+              <div class="submetric-title">Recuperación Inversión</div>
+              <div class="submetric-val" id="calc-payback-days" style="color: var(--brand-wa);">18 días</div>
+            </div>
+          </div>
+
+          <div class="calc-guarantee-note">
+            <span style="font-size: 1.2rem;">🛡️</span>
+            <span>Garantía de desempeño: Reducción comprobada del costo por ticket de $1.80 a menos de $0.15 USD.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIAGRAMA DE ARQUITECTURA Y STACK TECNOLÓGICO -->
+  <section class="section" id="arquitectura">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">
+          <span>⚙️</span> Infraestructura & Conectores
+        </div>
+        <h2 class="section-title">Arquitectura Técnica de Solución</h2>
+        <p class="section-subtitle">
+          Diseñado con estándares empresariales de alta disponibilidad, seguridad con encriptación de extremo a extremo e integración nativa con los principales ecosistemas de e-commerce.
+        </p>
+      </div>
+
+      <div class="architecture-container">
+        <div class="arch-flow-diagram">
+          
+          <!-- Nodo 1 -->
+          <div class="arch-node glass-hover">
+            <div class="arch-node-icon" style="color: var(--brand-wa); border: 1px solid var(--border-glass-wa);">💬</div>
+            <div class="arch-node-title">1. WhatsApp Cloud API</div>
+            <div class="arch-node-desc">Meta Webhooks oficiales con verificación HMAC SHA256 y SLA de entrega instantánea.</div>
+            <div class="arch-connector-arrow">➔</div>
+          </div>
+
+          <!-- Nodo 2 -->
+          <div class="arch-node glass-hover">
+            <div class="arch-node-icon" style="color: var(--brand-cyan); border: 1px solid var(--border-glass-glow);">🛡️</div>
+            <div class="arch-node-title">2. OmniFlow Gateway</div>
+            <div class="arch-node-desc">Manejo de sesiones, rate limiting, sanitización de datos y autenticación de clientes.</div>
+            <div class="arch-connector-arrow">➔</div>
+          </div>
+
+          <!-- Nodo 3 -->
+          <div class="arch-node glass-hover">
+            <div class="arch-node-icon" style="color: #a855f7; border: 1px solid rgba(168, 85, 247, 0.3);">🧠</div>
+            <div class="arch-node-title">3. Motor de Inferencia & RAG</div>
+            <div class="arch-node-desc">Clasificación de intenciones, análisis de sentimiento, embeddings y Function Calling.</div>
+            <div class="arch-connector-arrow">➔</div>
+          </div>
+
+          <!-- Nodo 4 -->
+          <div class="arch-node glass-hover">
+            <div class="arch-node-icon" style="color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.3);">🔌</div>
+            <div class="arch-node-title">4. Integraciones & APIs</div>
+            <div class="arch-node-desc">Shopify, WooCommerce, DHL/FedEx API, n8n/Make workflows y base de datos relacional.</div>
+            <div class="arch-connector-arrow">➔</div>
+          </div>
+
+          <!-- Nodo 5 -->
+          <div class="arch-node glass-hover">
+            <div class="arch-node-icon" style="color: #10b981; border: 1px solid rgba(16, 185, 129, 0.3);">🎯</div>
+            <div class="arch-node-title">5. Resolución & Handoff</div>
+            <div class="arch-node-desc">Cierre autónomo de ticket en CRM o transferencia en caliente a agentes humanos.</div>
+          </div>
+
+        </div>
+
+        <!-- Badges de Tecnologías Integradas -->
+        <div style="margin-top: 40px; display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+          <span class="status-tag tag-neutral">🛍️ Shopify Partner</span>
+          <span class="status-tag tag-neutral">📦 WooCommerce REST API</span>
+          <span class="status-tag tag-neutral">⚡ n8n Workflow Automation</span>
+          <span class="status-tag tag-neutral">💬 Meta WhatsApp Business API</span>
+          <span class="status-tag tag-neutral">🐘 PostgreSQL / Neon</span>
+          <span class="status-tag tag-neutral">🤖 Google Gemini & OpenAI</span>
+          <span class="status-tag tag-neutral">🎧 Zendesk & Freshdesk</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASOS DE ÉXITO Y MÉTRICAS DE IMPACTO -->
+  <section class="section" id="casos">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">
+          <span>🏆</span> Resultados Comprobados
+        </div>
+        <h2 class="section-title">Casos de Éxito en Negocios Reales</h2>
+        <p class="section-subtitle">
+          Marcas que han escalado sus operaciones de atención al cliente sin duplicar sus costos en personal de soporte.
+        </p>
+      </div>
+
+      <div class="grid-3">
+        <!-- Caso 1 -->
+        <div class="case-card glass-hover">
+          <div class="case-card-top">
+            <span class="case-industry-tag">Moda & Calzado E-commerce</span>
+            <h3 class="case-client-name">ModaExpress Store</h3>
+            <p style="font-size: 0.88rem; color: var(--text-secondary);">
+              Tienda con más de 8.000 envíos mensuales. Implementó OmniFlow para rastreo de pedidos y cambios automáticos de talla.
+            </p>
+            <div class="case-metrics-row">
+              <div class="case-metric-box">
+                <div class="case-metric-number">-74%</div>
+                <div class="case-metric-label">Tickets a humanos</div>
+              </div>
+              <div class="case-metric-box">
+                <div class="case-metric-number">98%</div>
+                <div class="case-metric-label">Cambios auto-gestionados</div>
+              </div>
+            </div>
+          </div>
+          <div class="case-quote">
+            "Pasamos de tener clientes esperando 4 horas por WhatsApp a resolver dudas de tracking en 3 segundos. El impacto en ventas fue inmediato."
+          </div>
+        </div>
+
+        <!-- Caso 2 -->
+        <div class="case-card glass-hover">
+          <div class="case-card-top">
+            <span class="case-industry-tag">Tecnología & Gadgets</span>
+            <h3 class="case-client-name">TechZone Pro</h3>
+            <p style="font-size: 0.88rem; color: var(--text-secondary);">
+              Comercializador de electrónica con alta tasa de preguntas sobre compatibilidad, stock y garantía de envíos.
+            </p>
+            <div class="case-metrics-row">
+              <div class="case-metric-box">
+                <div class="case-metric-number">&lt; 3s</div>
+                <div class="case-metric-label">Tiempo de respuesta</div>
+              </div>
+              <div class="case-metric-box">
+                <div class="case-metric-number">+$38k</div>
+                <div class="case-metric-label">Ventas guiadas por IA</div>
+              </div>
+            </div>
+          </div>
+          <div class="case-quote">
+            "El asistente no solo atiende dudas técnicas, sino que recomienda el producto correcto con stock en tiempo real y cierra la venta."
+          </div>
+        </div>
+
+        <!-- Caso 3 -->
+        <div class="case-card glass-hover">
+          <div class="case-card-top">
+            <span class="case-industry-tag">Suplementos & Salud</span>
+            <h3 class="case-client-name">NutriLife Global</h3>
+            <p style="font-size: 0.88rem; color: var(--text-secondary);">
+              Marca D2C con atención omnicanal en 3 países. Sincronizó Zendesk y WhatsApp Cloud API en una única consola.
+            </p>
+            <div class="case-metrics-row">
+              <div class="case-metric-box">
+                <div class="case-metric-number">4.9/5</div>
+                <div class="case-metric-label">Calificación CSAT</div>
+              </div>
+              <div class="case-metric-box">
+                <div class="case-metric-number">14 días</div>
+                <div class="case-metric-label">Retorno de inversión</div>
+              </div>
+            </div>
+          </div>
+          <div class="case-quote">
+            "La detección de frustración es una obra de arte: cuando un cliente tiene una queja, el bot lo compensa de inmediato y calma las aguas."
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMULARIO DE CONTACTO Y CONTRATACIÓN -->
+  <section class="section" id="contacto">
+    <div class="container" style="max-width: 900px;">
+      <div class="contact-card-box">
+        <div class="section-header" style="margin-bottom: 30px;">
+          <div class="section-badge section-badge-wa">
+            <span>💬</span> Conversa con un Ingeniero de Automatización
+          </div>
+          <h2 class="section-title" style="font-size: 2.2rem;">¿Listo para Automatizar tu Atención al Cliente?</h2>
+          <p class="section-subtitle">
+            Agenda una sesión estratégica de 20 minutos para analizar el flujo de tu tienda o déjanos un mensaje para enviarte una cotización detallada.
+          </p>
+        </div>
+
+        <form id="lead-contact-form">
+          <div class="grid-2">
+            <div class="form-group">
+              <label class="form-label" for="contact-name">Tu Nombre y Apellido *</label>
+              <input type="text" id="contact-name" class="form-control" placeholder="Ej. Camila Morales" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="contact-company">Nombre de tu Tienda / E-commerce *</label>
+              <input type="text" id="contact-company" class="form-control" placeholder="Ej. TiendaModa.com" required>
+            </div>
+          </div>
+
+          <div class="grid-2">
+            <div class="form-group">
+              <label class="form-label" for="contact-email">Correo Electrónico Corporativo *</label>
+              <input type="email" id="contact-email" class="form-control" placeholder="nombre@tienda.com" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="contact-orders">Pedidos Mensuales Aproximados</label>
+              <select id="contact-orders" class="form-control">
+                <option value="500-2000">500 a 2.000 pedidos/mes</option>
+                <option value="2000-8000" selected>2.000 a 8.000 pedidos/mes</option>
+                <option value="8000-20000">8.000 a 20.000 pedidos/mes</option>
+                <option value="20000+">Más de 20.000 pedidos/mes</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="contact-message">¿Qué cuello de botella principal deseas resolver?</label>
+            <textarea id="contact-message" class="form-control" rows="3" placeholder="Ej. Demasiadas consultas sobre estado de envíos en WhatsApp, tiempos de espera altos, gestión manual de devoluciones..."></textarea>
+          </div>
+
+          <div style="display: flex; gap: 16px; align-items: center; justify-content: flex-end; flex-wrap: wrap; margin-top: 25px;">
+            <a href="https://wa.me/5491100000000?text=Hola!%20Vi%20el%20portafolio%20de%20OmniFlow%20AI%20y%20quiero%20automatizar%20mi%20e-commerce" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color: var(--brand-wa); color: var(--brand-wa);">
+              <span>📱</span> Chatear directo por WhatsApp
+            </a>
+            <button type="submit" class="btn btn-primary" id="btn-submit-lead">
+              <span>🚀</span> Enviar Solicitud de Proyecto
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <div class="brand-logo-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V15H13V17ZM13 13H11V7H13V13Z"/></svg>
+            </div>
+            <span>OmniFlow<span style="color: var(--brand-wa);">.ai</span></span>
+          </div>
+          <p>
+            Estudio especializado en ingeniería de agentes inteligentes y automatización conversacional para e-commerce. Convertimos el soporte al cliente en un motor de fidelización y rentabilidad.
+          </p>
+        </div>
+
+        <div class="footer-links-group">
+          <h4>Soluciones</h4>
+          <ul class="footer-links">
+            <li><a href="#demo">Tracking de Pedidos</a></li>
+            <li><a href="#demo">Gestión de Cambios</a></li>
+            <li><a href="#demo">Asistente de Ventas</a></li>
+            <li><a href="#demo">Escalado Humano en Vivo</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-group">
+          <h4>Herramientas</h4>
+          <ul class="footer-links">
+            <li><a href="#demo">Simulador WhatsApp</a></li>
+            <li><a href="#calculadora">Calculadora de ROI</a></li>
+            <li><a href="#arquitectura">Diagrama de Conectores</a></li>
+            <li><a href="#casos">Métricas & KPIs</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-group">
+          <h4>Contacto</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:contacto@omniflow.ai">contacto@omniflow.ai</a></li>
+            <li><a href="https://linkedin.com" target="_blank">LinkedIn de la Agencia</a></li>
+            <li><a href="https://github.com" target="_blank">GitHub / Repositorio</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 OmniFlow AI Studio. Todos los derechos reservados.</div>
+        <div style="display: flex; gap: 12px;">
+          <span>Stack: Vanilla Web • Modern CSS Glassmorphism • ES6+ Modules</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL PARA CONECTAR API KEY PROPIA (OPCIONAL) -->
+  <div class="modal-overlay" id="api-key-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 style="color: var(--text-highlight); font-size: 1.2rem; display: flex; align-items: center; gap: 8px;">
+          <span>⚙️</span> Configuración de Motor IA en Vivo
+        </h3>
+        <button class="modal-close-btn" id="modal-close-btn">&times;</button>
+      </div>
+      <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 18px; line-height: 1.5;">
+        El portafolio funciona <b>100% de forma autónoma y sin costos</b> gracias a su motor determinista con base de datos simulada. Si eres reclutador o cliente técnico y deseas probar respuestas en lenguaje libre con una IA generativa real, puedes ingresar tu clave aquí:
+      </p>
+
+      <div class="form-group">
+        <label class="form-label" for="ai-provider-select">Proveedor de IA:</label>
+        <select id="ai-provider-select" class="form-control">
+          <option value="gemini" selected>Google Gemini (Gemini 1.5 Flash)</option>
+          <option value="openai">OpenAI (GPT-4o-mini)</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="custom-api-key-input">Tu API Key:</label>
+        <input type="password" id="custom-api-key-input" class="form-control" placeholder="AIzaSy... o sk-proj-...">
+        <span style="font-size: 0.72rem; color: var(--text-muted); margin-top: 4px; display: block;">
+          🔒 Tu clave se almacena exclusivamente en el localStorage de tu navegador y nunca es enviada a servidores externos.
+        </span>
+      </div>
+
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 24px;">
+        <button class="btn btn-outline btn-sm" id="btn-clear-api-key" style="color: var(--status-danger);">
+          Restablecer Motor Estándar
+        </button>
+        <button class="btn btn-cyan btn-sm" id="btn-save-api-key">
+          Guardar y Activar
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL DE AGENDAMIENTO DE LLAMADA -->
+  <div class="modal-overlay" id="booking-modal">
+    <div class="modal-content" style="max-width: 580px;">
+      <div class="modal-header">
+        <h3 style="color: var(--text-highlight); font-size: 1.25rem; display: flex; align-items: center; gap: 8px;">
+          <span>📅</span> Agendar Sesión Estratégica (20 Min)
+        </h3>
+        <button class="modal-close-btn" id="booking-modal-close-btn">&times;</button>
+      </div>
+      <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 20px; line-height: 1.5;">
+        Analizaremos el volumen de tu tienda, tus cuellos de botella actuales y te mostraremos cómo se integraría OmniFlow AI con tu plataforma en menos de 7 días.
+      </p>
+
+      <form id="booking-form">
+        <div class="grid-2">
+          <div class="form-group">
+            <label class="form-label" for="booking-name">Nombre y Apellido</label>
+            <input type="text" id="booking-name" class="form-control" placeholder="Ej. Camila Morales" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="booking-email">Correo Corporativo</label>
+            <input type="email" id="booking-email" class="form-control" placeholder="nombre@tienda.com" required>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div class="form-group">
+            <label class="form-label" for="booking-date">Fecha Deseada</label>
+            <input type="date" id="booking-date" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="booking-time">Horario Preferido</label>
+            <select id="booking-time" class="form-control">
+              <option value="10:00">10:00 AM (Mañana)</option>
+              <option value="12:00">12:00 PM (Mediodía)</option>
+              <option value="15:00" selected>03:00 PM (Tarde)</option>
+              <option value="17:00">05:00 PM (Tarde)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="booking-platform">Plataforma de tu Tienda</label>
+          <select id="booking-platform" class="form-control">
+            <option value="Shopify" selected>Shopify</option>
+            <option value="WooCommerce">WooCommerce</option>
+            <option value="VTEX">VTEX</option>
+            <option value="Otra">Otra plataforma</option>
+          </select>
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; gap: 12px; margin-top: 24px;">
+          <button type="button" class="btn btn-outline btn-sm" id="btn-cancel-booking">Cancelar</button>
+          <button type="submit" class="btn btn-primary btn-sm" id="btn-confirm-booking">
+            <span>✅</span> Confirmar Reunión
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Botón Flotante de WhatsApp para Contacto Rápido -->
+  <a href="https://wa.me/5491100000000?text=Hola!%20Vi%20el%20portafolio%20de%20OmniFlow%20AI%20y%20quiero%20conocer%20m%C3%A1s" target="_blank" rel="noopener noreferrer" class="floating-wa-btn pulse-badge" id="floating-wa-btn" title="Chatear con un Asesor">
+    <svg viewBox="0 0 32 32" width="28" height="28" fill="#ffffff">
+      <path d="M16 2a14 14 0 0 0-12.1 21L2 30l7.3-1.9A14 14 0 1 0 16 2zm0 25.5a11.5 11.5 0 0 1-5.9-1.6l-.4-.3-4.4 1.1 1.2-4.3-.3-.4A11.5 11.5 0 1 1 16 27.5zm6.3-8.6c-.3-.2-2-.9-2.3-1s-.6-.2-.8.2-.9 1.1-1.1 1.3-.4.2-.7.1a9.2 9.2 0 0 1-2.7-1.7 10.2 10.2 0 0 1-1.9-2.3c-.2-.3 0-.5.2-.6l.5-.6c.2-.2.2-.3.3-.5a.6.6 0 0 0 0-.6c-.1-.1-.8-2-.1.1-2.7s-.6-.6-.8-.6h-.7a1.4 1.4 0 0 0-1 1 5.4 5.4 0 0 0 1.7 4 14.8 14.8 0 0 0 6.3 4.2c2.5 1 3.5.8 4.2.7a3.6 3.6 0 0 0 2.4-1.7 3 3 0 0 0 .2-1.7c-.2-.1-.5-.2-.8-.3z"/>
+    </svg>
+    <span class="floating-wa-tooltip">¿Dudas? Chatea con nosotros</span>
+  </a>
+
+  <!-- Scripts Modulares -->
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

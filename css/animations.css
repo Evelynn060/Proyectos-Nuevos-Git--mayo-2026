@@ -1,0 +1,96 @@
+/**
+ * OmniFlow AI - Micro-animations & Dynamic Effects
+ */
+
+@keyframes fadeInSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+    box-shadow: 0 0 25px var(--brand-wa-glow);
+  }
+}
+
+@keyframes pulseDot {
+  0%, 80%, 100% {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+  40% {
+    transform: translateY(-6px);
+    opacity: 1;
+  }
+}
+
+@keyframes floatOrb {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(25px, -30px) scale(1.06);
+  }
+}
+
+@keyframes floatOrbReverse {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-30px, 20px) scale(0.95);
+  }
+}
+
+@keyframes shimmerEffect {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.anim-fade-in {
+  animation: fadeInSlideUp 0.32s cubic-bezier(0.2, 0.9, 0.3, 1) forwards;
+}
+
+.pulse-badge {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+.typing-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #94a3b8;
+  margin: 0 2px;
+}
+
+.typing-dot:nth-child(1) { animation: pulseDot 1.2s infinite ease-in-out 0s; }
+.typing-dot:nth-child(2) { animation: pulseDot 1.2s infinite ease-in-out 0.2s; }
+.typing-dot:nth-child(3) { animation: pulseDot 1.2s infinite ease-in-out 0.4s; }
+
+/* Efecto Hover en Tarjetas Glassmorphism */
+.glass-hover {
+  transition: transform var(--transition-normal), border-color var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.glass-hover:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-glass-glow);
+  box-shadow: var(--shadow-card), 0 0 25px rgba(0, 210, 255, 0.12);
+}
